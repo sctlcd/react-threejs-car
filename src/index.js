@@ -3,6 +3,7 @@ import "./index.css";
 import { createRoot } from "react-dom/client";
 // React renderer for three.js
 import { Canvas } from "@react-three/fiber";
+import { Scene } from "./Scene";
 
 // create a React root for displaying content inside a browser DOM element
 createRoot(document.getElementById("root")).render(
@@ -10,5 +11,8 @@ createRoot(document.getElementById("root")).render(
     // The Canvas object is where you start to define your React Three Fiber Scene.
     // All three.js scripts should be wrap under the canvas component 
     // since we can't use @react-three/fiber hooks outside of canvas (Scene component, etc.)
-    <Canvas></Canvas>
+    <Canvas>
+      {/* Define Scene that will be used to place objects */}
+      <Scene />
+    </Canvas>
 );
