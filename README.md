@@ -190,6 +190,7 @@ Back to [top](#tableOfContents)
 ### Media <a name="media"></a>
 
 - [favicon.ico](https://www.flaticon.com/free-icon/race_1531198?related_id=1531198) - [flaticon.com](https://www.flaticon.com/) | copyright [freepik](https://www.freepik.com)
+- textures from [Aversis 3D](http://www.aversis.be/extras/index.htm)
 - []() - []() | 
 
 Back to [top](#tableOfContents)
