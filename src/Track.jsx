@@ -29,11 +29,6 @@ export function Track() {
     trackTextureFile
   );
 
-  // const colorMap = useLoader(
-  //   TextureLoader,
-  //   process.env.PUBLIC_URL + "/textures/track.png"
-  // );
-
   // useEffect hook:  synchronize a component with an external system - 
   // The component needs to do something after render. By default, 
   // it runs both after the first render and after every update
