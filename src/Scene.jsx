@@ -15,8 +15,8 @@ export function Scene() {
         files= {"Zion_7_Sunsetpeek_Ref_blurred.hdr"} // {"envmap.hdr"}
         path={process.env.PUBLIC_URL + "/textures/"}
         blur={1} // blur factor between 0 and 1 (default: 0, only works with three 0.146 and up)
-        // near={2} 
-        // far={2000} 
+        // near={1} 
+        // far={1000} 
         // resolution={256}
         // preset="forest"
         // ground={{
