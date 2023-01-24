@@ -27,9 +27,9 @@ export function Scene() {
         // }}
       />
       {/* Define PerspectiveCamera: this projection mode is designed to mimic the way the human eye sees */}
-      <PerspectiveCamera makeDefault position={[-6, 3.9, 6.21]} fov={40} />
+      <PerspectiveCamera makeDefault position={[-1.5, 3, 6.21]} fov={44} />
       {/* Define Orbit controls: allow the camera to orbit around a target. */}
-      <OrbitControls target={[-2.64, -0.71, 0.03]} />
+      <OrbitControls target={[-2.2, -0.70, 0.01]} />
       <Track />
     </Suspense>
   )
