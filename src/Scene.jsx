@@ -12,12 +12,12 @@ export function Scene() {
       {/* Define Environment map that it will use for any reflection calculations */}
       <Environment
         background={"both"} // can be true, false or "only" (which only sets the background) (default: false)
-        files= {"Zion_7_Sunsetpeek_Ref.hdr"} // {"envmap.hdr"}
+        files= {"Zion_7_Sunsetpeek_Ref_blurred.hdr"} // {"envmap.hdr"}
         path={process.env.PUBLIC_URL + "/textures/"}
         blur={0} // blur factor between 0 and 1 (default: 0, only works with three 0.146 and up)
-        near={1} 
-        far={1000} 
-        resolution={256}
+        // near={2} 
+        // far={2000} 
+        // resolution={256}
         // preset="forest"
         // ground={{
         //   height: 15, // Height of the camera that was used to create the env map (Default: 15)
