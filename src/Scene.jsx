@@ -13,7 +13,7 @@ export function Scene() {
       {/* Define Environment map that it will use for any reflection calculations */}
       <Environment
         background={"both"} // can be true, false or "only" (which only sets the background) (default: false)
-        files= {"Zion_7_Sunsetpeek_Ref_blurred.hdr"} // {"envmap.hdr"}
+        files= {"HDR_Free_City_Night_Lights_Env.hdr"} //{"Zion_7_Sunsetpeek_Ref_blurred.hdr"} // {"envmap.hdr"}
         path={process.env.PUBLIC_URL + "/textures/"}
         blur={1} // blur factor between 0 and 1 (default: 0, only works with three 0.146 and up)
         // near={1} 
