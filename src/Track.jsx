@@ -5,8 +5,9 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 
 export function Track() {
+
   // Create a Model component
-  const modelPath = process.env.PUBLIC_URL + "/models/";
+  const modelPath = `${process.env.PUBLIC_URL}/models/`;
   const modelFileName = "track.glb";
   const trackModelFile = modelPath + modelFileName;
   // useLoader hook:  in React Three Fiber to pre-cache any assets
@@ -18,7 +19,7 @@ export function Track() {
   );
 
   // Create a Texture component
-  const texturePath = process.env.PUBLIC_URL + "/textures/";
+  const texturePath = `${process.env.PUBLIC_URL}/textures/`;
   const textureFileName = "track.png";
   const trackTextureFile = texturePath + textureFileName;
   // useLoader hook: used in React Three Fiber to pre-cache any assets
@@ -39,11 +40,12 @@ export function Track() {
     colorMap.anisotropy = 16;
   }, [colorMap])
 
-  let geometry = result.scene.children[0].geometry;
+  const geometry = result.scene.children[0].geometry;
 
   return(
     // mesh is given a geometry and a material as a child
     <mesh>
+
       {/* geometry */}
       {/* Primitive construct: take an already existing geometry object and
       assign it as a property of the mesh */}
@@ -51,11 +53,13 @@ export function Track() {
       <primitive 
         object={geometry} 
         attach={"geometry"} />
+      
       {/* material */}
       <meshBasicMaterial
         toneMapped={false}
         map={colorMap} // The color map.
       />
+
     </mesh>
   );
 }

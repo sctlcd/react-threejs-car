@@ -99,7 +99,7 @@ Back to [top](#tableOfContents)
 1. Prerequisite:
    - Make sure [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) are installed on your computer. You can download both at nodejs.org (NPM is included in your Node installation).
    - Please see `.nvmrc` file at the root of `react-threejs-car-racing` repo.
-   - Using nvm, a Node Version Manager is recommended as it helps you manage and switch between different Node versions with ease. It provides a command-line interface where you can install different versions with a single command, set a default, switch between them, etc.
+   - Using nvm, a Node Version Manager is recommended as it helps you manage and switch between different Node versions with ease. It provides a command-line interface where you can install different versions with a single command, set a default, switch between them, etc. Here is [NVM for Windows](https://github.com/coreybutler/nvm-windows)
 2. In GitHub click on the repository nammed [react-threejs-car-racing](https://github.com/sctlcd/react-threejs-car-racing)
 3. Clone the repository locally. Run
 

@@ -12,7 +12,9 @@ createRoot(document.getElementById("root")).render(
     // All three.js scripts should be wrap under the canvas component 
     // since we can't use @react-three/fiber hooks outside of canvas (Scene component, etc.)
     <Canvas>
+
       {/* Define Scene that will be used to place objects */}
       <Scene />
+    
     </Canvas>
 );
