@@ -59,7 +59,7 @@ export function Track() {
         toneMapped={false}
         map={colorMap} // The color map.
       />
-      
+
     </mesh>
   );
 }
