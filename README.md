@@ -189,9 +189,11 @@ Back to [top](#tableOfContents)
 
 ### Media <a name="media"></a>
 
-- [favicon.ico](https://www.flaticon.com/free-icon/race_1531198?related_id=1531198) - [flaticon.com](https://www.flaticon.com/) | copyright [freepik](https://www.freepik.com)
+- [favicon.ico](https://www.flaticon.com/free-icon/race_1531198?related_id=1531198) - [Flaticon](https://www.flaticon.com/) | copyright [freepik](https://www.freepik.com)
 - textures from [Aversis 3D](http://www.aversis.be/extras/index.htm)
-- []() - []() | 
+- [peugeot_205_gti](https://sketchfab.com/3d-models/peugeot-205-gti-b52c8e5e8070463ab1485039246f527c) - [Sketchfab](https://sketchfab.com/) | copyright [Jérôme SECLIER](https://la_freizz_artland.artstation.com/)
+- [65_chevy_malibu](https://sketchfab.com/3d-models/65-chevy-malibu-170df9c498a84dcea040985871ee4e67) - [Sketchfab](https://sketchfab.com/) | copyright [Joko_P](https://www.artstation.com/joko_p)
+- []() - []() | copyright []()
 
 Back to [top](#tableOfContents)
 
