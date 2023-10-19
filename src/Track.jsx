@@ -7,27 +7,29 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader';
 export function Track() {
 
   // Create a Model component
-  const modelPath = `${process.env.PUBLIC_URL}/models/`;
+  const modelsFolderPath = `${process.env.PUBLIC_URL}/models/`;
   const modelFileName = "track.glb";
-  const trackModelFile = modelPath + modelFileName;
+  const modelFilePath = `${modelsFolderPath}${modelFileName}`;
+  
   // useLoader hook:  in React Three Fiber to pre-cache any assets
   // in memory, such as images or 3D models for later use in the scene.
   // Automatically suspends the components until al the assets have been downloaded
   const result = useLoader(
     GLTFLoader,
-    trackModelFile
+    modelFilePath
   );
 
   // Create a Texture component
-  const texturePath = `${process.env.PUBLIC_URL}/textures/`;
+  const textureFolderPath = `${process.env.PUBLIC_URL}/textures/`;
   const textureFileName = "track.png";
-  const trackTextureFile = texturePath + textureFileName;
+  const textureFilePath = `${textureFolderPath}${textureFileName}`;
+  
   // useLoader hook: used in React Three Fiber to pre-cache any assets
   // in memory, such as images or 3D models for later use in the scene
   // Automatically suspends the components until al the assets have been downloaded
   const colorMap = useLoader(
     TextureLoader,
-    trackTextureFile
+    textureFilePath
   );
 
   // useEffect hook:  synchronize a component with an external system - 
