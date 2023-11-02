@@ -1,6 +1,7 @@
 import { useLoader } from "@react-three/fiber";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { useBox } from "@react-three/cannon";
 
 export function Car() {
   const modelsFolderPath = `${process.env.PUBLIC_URL}/models/`;
@@ -11,6 +12,23 @@ export function Car() {
     GLTFLoader,
     modelFilePath,
   ).scene;
+
+  const position = [-1.5, 0.5, 3];
+  const width = 0.15;
+  const height = 0.07;
+  const front = 0.15;
+  const wheelRadius = 0.05;
+
+  const chassisBodyArgs = [width, height, front * 2];
+  const [chassisBody, chassisApi] = useBox(
+    () => ({
+      allowSleep: false,
+      args: chassisBodyArgs,
+      mass: 150,
+      position,
+    }),
+    useRef(null),
+  );
 
   useEffect(() => {
     // car.glb
@@ -27,6 +45,10 @@ export function Car() {
   }, [mesh]);
 
   return (
-    <primitive object={mesh} rotation-y={Math.PI} />
+    // <primitive object={mesh} rotation-y={Math.PI} />
+    <mesh ref={chassisBody}>
+      <meshBasicMaterial transparent={true} opacity={0.3} />
+      <boxGeometry args={chassisBodyArgs} />
+    </mesh>
   );
 }
