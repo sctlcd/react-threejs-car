@@ -3,8 +3,17 @@ import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { useEffect, useRef } from "react";
 import { MeshReflectorMaterial  } from "@react-three/drei";
 import { BufferAttribute } from "three";
+import { usePlane } from "@react-three/cannon";
 
 export function Ground() {
+
+  const [ref] = usePlane(
+    () => ({ 
+      type: 'Static', 
+      rotation: [-Math.PI / 2, 0, 0] }
+    ), 
+    useRef(null)
+  );
 
   // Create a grid map texture component
   const texturesFolderPath = `${process.env.PUBLIC_URL}/textures/`;
