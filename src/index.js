@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 // React renderer for three.js
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "./Scene";
+import { Physics } from "@react-three/cannon";
 
 // create a React root for displaying content inside a browser DOM element
 createRoot(document.getElementById("root")).render(
@@ -12,9 +13,13 @@ createRoot(document.getElementById("root")).render(
     // All three.js scripts should be wrap under the canvas component 
     // since we can't use @react-three/fiber hooks outside of canvas (Scene component, etc.)
     <Canvas>
-
-      {/* Define Scene that will be used to place objects */}
-      <Scene />
-    
+      {/* create a physics world */}
+      <Physics
+        broadphase="SAP"
+        gravity={[0, -2.6, 0]}
+      >
+        {/* Define Scene that will be used to place objects */}
+        <Scene />
+      </Physics>
     </Canvas>
 );
