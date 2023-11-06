@@ -7,11 +7,18 @@ import { usePlane } from "@react-three/cannon";
 
 export function Ground() {
 
+  // useCannon hooks of usePlane
+  // create a plane ground
   const [ref] = usePlane(
-    () => ({ 
+    () => ({
+      // Static bodies can only be positioned in the world and aren't affected by forces nor velocity
+      // If you pass a mass of 0 to a body, that body is automatically flagged as a static body
       type: 'Static', 
       rotation: [-Math.PI / 2, 0, 0] }
-    ), 
+    ),
+    // useRef React Hook that lets you reference a value that’s not needed for rendering
+    // Changing a ref does not trigger a re-render. This means refs are perfect for 
+    // storing information that doesn’t affect the visual output of your component.
     useRef(null)
   );
 
@@ -52,6 +59,11 @@ export function Ground() {
     alphaMapTextureFilePath
   );
 
+  // useEffect hook: synchronizes a component with an external system - 
+  // The component needs to do something after render. By default, 
+  // it runs both after the first render and after every update
+  // Subscribes to the ground gridMap changes and runs on the first render and
+  // any time the ground gridMap changes.
   useEffect(() => {
     if (!gridMap) return;
 
@@ -59,9 +71,15 @@ export function Ground() {
     gridMap.anisotropy = 16;
   }, [gridMap]);
 
+  // useRef React Hook that lets you reference a value that’s not needed for rendering
+  // Changing a ref does not trigger a re-render. This means refs are perfect for 
+  // storing information that doesn’t affect the visual output of your component.
   const meshRef1 = useRef(null);
   const meshRef2 = useRef(null);
 
+  // useEffect hook: synchronizes a component with an external system - 
+  // The component needs to do something after render. By default, 
+  // it runs both after the first render and after every update
   useEffect(() => {
     if (!meshRef1.current) return;
 

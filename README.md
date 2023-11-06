@@ -117,8 +117,8 @@ Back to [top](#tableOfContents)
    note: in this app
 
    - [three](https://www.npmjs.com/package/three) - **JavaScript 3D library**
-   - [react-three/cannon]() - **Physics based hooks for react-three-fiber**
-   - [react-three/drei]() - **Useful add-ons for react-three-fiber**
+   - [react-three/cannon](https://github.com/pmndrs/use-cannon) - **Physics based hooks for react-three-fiber**
+   - [react-three/drei](https://drei.pmnd.rs/) - **Useful add-ons for react-three-fiber**
    - [react-three/fiber](https://www.npmjs.com/package/@react-three/fiber) - **React renderer for threejs**
    - [react](https://reactjs.org/) - **JavaScript library for creating user interfaces**
    - [react-dom](https://www.npmjs.com/package/react-dom) - **Package that serves as the entry point to the DOM and server renderers for React**

@@ -32,7 +32,7 @@ export function Track() {
     textureFilePath
   );
 
-  // useEffect hook:  synchronize a component with an external system - 
+  // useEffect hook: synchronizes a component with an external system - 
   // The component needs to do something after render. By default, 
   // it runs both after the first render and after every update
   // Subscribes to the track colorMap changes and runs on the first render and
