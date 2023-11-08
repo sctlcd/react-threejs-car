@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useCompoundBody } from "@react-three/cannon";
 
 export const useWheels = (width, height, front, radius) => {
   const wheels = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -58,6 +59,14 @@ export const useWheels = (width, height, front, radius) => {
     // Kinematic bodies aren't affected by forces but can have a velocity and move around
     type: "Kinematic",
   });
+
+  // Compound shape is a shape built out of other shapes called child-shapes.
+  // It can be seen as a holder of a group of other shapes.
+  // Use the compound shape to build rigid bodies that have more complex geometry.
+  useCompoundBody(propsFunc, wheels[0]);
+  useCompoundBody(propsFunc, wheels[1]);
+  useCompoundBody(propsFunc, wheels[2]);
+  useCompoundBody(propsFunc, wheels[3]);
 
   return [wheels, wheelInfos];
 }
