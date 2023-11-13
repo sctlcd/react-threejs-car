@@ -2,7 +2,7 @@ import { useLoader } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useBox, useRaycastVehicle } from "@react-three/cannon";
-import { useWheels } from "./useWheels";
+import { useWheels } from "../hooks/useWheels";
 import { WheelDebug } from "./WheelDebug";
 
 export function Car() {
