@@ -2,7 +2,7 @@ import { useLoader } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useBox, useRaycastVehicle } from "@react-three/cannon";
-import { useWheels } from "./useWheels";
+import { useWheels } from "../hooks/useWheels";
 import { WheelDebug } from "./WheelDebug";
 
 export function Car() {
@@ -13,7 +13,7 @@ export function Car() {
   // useLoader hook:  in React Three Fiber to pre-cache any assets
   // in memory, such as images or 3D models for later use in the scene.
   // Automatically suspends the components until al the assets have been downloaded
-  const result = useLoader(
+  const mesh = useLoader(
     GLTFLoader,
     modelFilePath,
   ).scene;
@@ -60,19 +60,19 @@ export function Car() {
   // Subscribes to the car mesh changes and runs on the first render and
   // any time the car mesh changes.
   useEffect(() => {
-    if (!result) return;
+    if (!mesh) return;
 
-    result.scale.set(0.0012, 0.0012, 0.0012); 
-    result.children[0].position.set(-365, -18, -67);
+    mesh.scale.set(0.0012, 0.0012, 0.0012); 
+    mesh.children[0].position.set(-365, -18, -67);
     
     // 65_chevy_malibu.glb
-    // result.scale.set(0.08, 0.08, 0.08); 
-    // result.children[0].position.set( 10, 0, 0);
+    // mesh.scale.set(0.08, 0.08, 0.08); 
+    // mesh.children[0].position.set( 10, 0, 0);
     
     // peugeot_205_gti.glb
-    // result.scale.set(0.2, 0.2, 0.2); 
-    // result.children[0].position.set( 1, 0.4, 0);
-  }, [result]);
+    // mesh.scale.set(0.2, 0.2, 0.2); 
+    // mesh.children[0].position.set( 1, 0.4, 0);
+  }, [mesh]);
 
   return (
     <group ref={vehicle} name="vehicle">
