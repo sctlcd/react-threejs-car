@@ -18,6 +18,7 @@ export function Car() {
     modelFilePath,
   ).scene;
 
+  /***************************************************************************** car building
   const position = [-1.5, 0.5, 3];
   const width = 0.15;
   const height = 0.07;
@@ -54,6 +55,8 @@ export function Car() {
     useRef(null),
   );
 
+  /**********************************************************************************/
+
   // useEffect hook: synchronizes a component with an external system - 
   // The component needs to do something after render. By default, 
   // it runs both after the first render and after every update
@@ -62,32 +65,39 @@ export function Car() {
   useEffect(() => {
     if (!mesh) return;
 
-    mesh.scale.set(0.0012, 0.0012, 0.0012); 
-    mesh.children[0].position.set(-365, -18, -67);
+    // car.glb
+    // mesh.scale.set(0.0012, 0.0012, 0.0012); 
+    // mesh.children[0].position.set(-365, -18, -67);
     
     // 65_chevy_malibu.glb
     // mesh.scale.set(0.08, 0.08, 0.08); 
     // mesh.children[0].position.set( 10, 0, 0);
     
     // peugeot_205_gti.glb
-    // mesh.scale.set(0.2, 0.2, 0.2); 
-    // mesh.children[0].position.set( 1, 0.4, 0);
+    mesh.scale.set(0.2, 0.2, 0.2); 
+    mesh.children[0].position.set( 1, 0.4, 0);
   }, [mesh]);
 
   return (
-    <group ref={vehicle} name="vehicle">
-      {/* Primitive construct: take an already existing mesh object and */}
-      {/* assign it as a property of the mesh */}
-      {/* <primitive object={mesh} rotation-y={Math.PI} /> */}
-      <mesh ref={chassisBody}>
-        <meshBasicMaterial transparent={true} opacity={0.3} />
-        <boxGeometry args={chassisBodyArgs} />
-      </mesh>
-
-      <WheelDebug wheelRef={wheels[0]} radius={wheelRadius} />
-      <WheelDebug wheelRef={wheels[1]} radius={wheelRadius} />
-      <WheelDebug wheelRef={wheels[2]} radius={wheelRadius} />
-      <WheelDebug wheelRef={wheels[3]} radius={wheelRadius} />
-    </group>
+    <primitive object={mesh} rotation-y={Math.PI} />
   );
+
+  /********************************************************************************** car building
+  // return ( 
+  //   <group ref={vehicle} name="vehicle">
+  //     /* Primitive construct: take an already existing mesh object and */
+  //     /* assign it as a property of the mesh */
+  //     /* <primitive object={mesh} rotation-y={Math.PI} /> */
+  //     <mesh ref={chassisBody}>
+  //       <meshBasicMaterial transparent={true} opacity={0.3} />
+  //       <boxGeometry args={chassisBodyArgs} />
+  //     </mesh>
+
+  //     <WheelDebug wheelRef={wheels[0]} radius={wheelRadius} />
+  //     <WheelDebug wheelRef={wheels[1]} radius={wheelRadius} />
+  //     <WheelDebug wheelRef={wheels[2]} radius={wheelRadius} />
+  //     <WheelDebug wheelRef={wheels[3]} radius={wheelRadius} />
+  //   </group>
+  // );
 }
+  
