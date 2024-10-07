@@ -75,11 +75,12 @@ export function Car() {
     
     // peugeot_205_gti.glb
     mesh.scale.set(0.2, 0.2, 0.2); 
-    mesh.children[0].position.set( 1, 0.4, 0);
+    // mesh.children[0].position.set( 1, 0.4, 0);
+    mesh.children[0].position.set(0, 0.37, -15);
   }, [mesh]);
 
   return (
-    <primitive object={mesh} rotation-y={Math.PI} />
+    <primitive object={mesh} rotation-y={Math.PI/2} />
   );
 
   /********************************************************************************** car building
