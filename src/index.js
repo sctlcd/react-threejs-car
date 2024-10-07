@@ -1,9 +1,9 @@
-import "./index.css"; 
+import "./assets/style/index.css";
 // package that provides client-specific methods used for initializing an app on the client
 import { createRoot } from "react-dom/client";
 // React renderer for three.js
 import { Canvas } from "@react-three/fiber";
-import { Scene } from "./Scene";
+import { Scene } from "./components/Scene";
 import { Physics } from "@react-three/cannon";
 
 // create a React root for displaying content inside a browser DOM element
