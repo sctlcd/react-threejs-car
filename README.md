@@ -1,4 +1,4 @@
-# [react-threejs-car-racing](https://react-threejs-car-racing.web.app/)
+# [react-threejs-car-racing](https://react-threejs-car-racing.vercel.app)
 
 <br />
 <img src="https://github.com/sctlcd/react-threejs-car-racing/blob/main/design/react-threejs-car-racing-preview.png" alt="react-threejs-car-racing" width="800">
@@ -29,7 +29,7 @@
 
 Creating a desktop Car racing game [React](https://reactjs.org/), [Three.js](https://threejs.org/), [React Three Fiber](https://github.com/pmndrs/react-three-fiber), [React Three Drei](https://github.com/pmndrs/drei), [React Three Cannon](https://github.com/pmndrs/use-cannon).
 
-<h2>:eyes: Have a look and zoom at the peugeot 205 gti and its interior! :collision:</h2>
+<h2>=> :eyes: Have a look and zoom at the peugeot 205 gti and its interior! :collision:</h2>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -142,6 +142,8 @@ Back to [top](#tableOfContents)
 
 ### Deployment - Live Website <a name="#deploymentLiveWebsite"></a>
 
+#### Firebase <a name="#firebase"></a>
+
 [react-threejs-car-racing](https://github.com/sctlcd/react-threejs-car-racing) live website is currently deployed on [Firebase](https://firebase.google.com/) using the `main` branch on GitHub. Once you have the project setup locally, you can proceed to deploy it remotely.
 
 1. Install Firebase CLI Tools, [firebase-tools](https://www.npmjs.com/package/firebase-tools)
@@ -181,7 +183,67 @@ Back to [top](#tableOfContents)
 
 3. After running `npm run build`, deploy using the command `firebase deploy`.
 
-=> live link: https://react-threejs-car-racing.web.app/
+=> live link: https://react-threejs-car-racing.web.app/ (example link - not in use)
+
+Back to [top](#tableOfContents)
+
+#### Vercel <a name="#vercel"></a>
+
+[react-threejs-car-racing](https://github.com/sctlcd/react-threejs-car-racing) live website is currently deployed on [Vercel](https://vercel.com/) using the `main` branch on GitHub. Once you have the project setup locally, you can proceed to deploy it remotely.
+
+1. Create a [Vercel](https://vercel.com/) account and/or log in to your [Vercel](https://vercel.com/) account
+
+2. Install Vercel package in the project:
+    ```
+    npm i vercel
+    ```
+
+3. Add a deploy script in the package.json file
+    ```
+    {
+      "scripts": {
+        // ...
+        "deploy": "vercel --prod"
+      },
+    }
+    ```
+
+4. To login run:
+    ```
+    npx vercel login
+    ```
+
+5. In the terminal run:
+    ```
+    npm run deploy
+    ```
+
+6. Follow the instructions
+    ```
+    $ npm run deploy
+
+    > react-threejs-car-racing@0.1.0 deploy
+    > vercel --prod
+
+    Vercel CLI 34.2.0
+    ? Set up and deploy “D:\github\react-threejs\react-threejs-car-racing”? yes
+    ? Which scope do you want to deploy to? sctlcd's projects
+    ? Link to existing project? no
+    ? What’s your project’s name? react-threejs-car-racing
+    ? In which directory is your code located? ./
+    Local settings detected in vercel.json:
+    Auto-detected Project Settings (Create React App):
+    - Build Command: react-scripts build
+    - Development Command: react-scripts start
+    - Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+    - Output Directory: build
+    ? Want to modify these settings? no
+    🔗  Linked to sctlcds-projects/react-threejs-car-racing (created .vercel and added it to .gitignore)
+    🔍  Inspect: https://vercel.com/sctlcds-projects/react-threejs-car-racing/5ftNRUrzpM6NqrxTt1snhqnGLSFo
+    ✅  Production: https://react-threejs-car-racing-ldxp3c4yq-sctlcds-projects.vercel.app
+    ```
+
+    => live link: https://react-threejs-car-racing.vercel.app/
 
 Back to [top](#tableOfContents)
 
