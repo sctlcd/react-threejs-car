@@ -29,7 +29,7 @@
 
 Creating a desktop Car racing game [React](https://reactjs.org/), [Three.js](https://threejs.org/), [React Three Fiber](https://github.com/pmndrs/react-three-fiber), [React Three Drei](https://github.com/pmndrs/drei), [React Three Cannon](https://github.com/pmndrs/use-cannon).
 
-<h3>:eyes: Have a look and zoom at the peugeot 205 gti and its interior! :collision:</h3>
+<h2>:eyes: Have a look and zoom at the peugeot 205 gti and its interior! :collision:</h2>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

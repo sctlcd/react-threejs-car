@@ -25,6 +25,10 @@ yarn-error.log*
 # Firebase files
 .firebaserc
 .firebase
+firebase-debug.log
 
 # vs code
 .vscode
+
+# Vercel files
+.vercel
