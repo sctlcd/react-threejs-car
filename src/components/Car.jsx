@@ -2,7 +2,7 @@ import { useLoader } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useBox, useRaycastVehicle } from "@react-three/cannon";
-import { useWheels } from "./useWheels";
+import { useWheels } from "../hooks/useWheels";
 import { WheelDebug } from "./WheelDebug";
 
 export function Car() {
@@ -13,11 +13,12 @@ export function Car() {
   // useLoader hook:  in React Three Fiber to pre-cache any assets
   // in memory, such as images or 3D models for later use in the scene.
   // Automatically suspends the components until al the assets have been downloaded
-  const result = useLoader(
+  const mesh = useLoader(
     GLTFLoader,
     modelFilePath,
   ).scene;
 
+  /***************************************************************************** car building
   const position = [-1.5, 0.5, 3];
   const width = 0.15;
   const height = 0.07;
@@ -54,40 +55,49 @@ export function Car() {
     useRef(null),
   );
 
+  /**********************************************************************************/
+
   // useEffect hook: synchronizes a component with an external system - 
   // The component needs to do something after render. By default, 
   // it runs both after the first render and after every update
   // Subscribes to the car mesh changes and runs on the first render and
   // any time the car mesh changes.
   useEffect(() => {
-    if (!result) return;
+    if (!mesh) return;
 
-    result.scale.set(0.0012, 0.0012, 0.0012); 
-    result.children[0].position.set(-365, -18, -67);
+    // car.glb
+    // mesh.scale.set(0.0012, 0.0012, 0.0012); 
+    // mesh.children[0].position.set(-365, -18, -67);
     
     // 65_chevy_malibu.glb
-    // result.scale.set(0.08, 0.08, 0.08); 
-    // result.children[0].position.set( 10, 0, 0);
+    // mesh.scale.set(0.08, 0.08, 0.08); 
+    // mesh.children[0].position.set( 10, 0, 0);
     
     // peugeot_205_gti.glb
-    // result.scale.set(0.2, 0.2, 0.2); 
-    // result.children[0].position.set( 1, 0.4, 0);
-  }, [result]);
+    mesh.scale.set(0.2, 0.2, 0.2); 
+    mesh.children[0].position.set( 1, 0.4, 0);
+  }, [mesh]);
 
   return (
-    <group ref={vehicle} name="vehicle">
-      {/* Primitive construct: take an already existing mesh object and */}
-      {/* assign it as a property of the mesh */}
-      {/* <primitive object={mesh} rotation-y={Math.PI} /> */}
-      <mesh ref={chassisBody}>
-        <meshBasicMaterial transparent={true} opacity={0.3} />
-        <boxGeometry args={chassisBodyArgs} />
-      </mesh>
-
-      <WheelDebug wheelRef={wheels[0]} radius={wheelRadius} />
-      <WheelDebug wheelRef={wheels[1]} radius={wheelRadius} />
-      <WheelDebug wheelRef={wheels[2]} radius={wheelRadius} />
-      <WheelDebug wheelRef={wheels[3]} radius={wheelRadius} />
-    </group>
+    <primitive object={mesh} rotation-y={Math.PI} />
   );
+
+  /********************************************************************************** car building
+  // return ( 
+  //   <group ref={vehicle} name="vehicle">
+  //     /* Primitive construct: take an already existing mesh object and */
+  //     /* assign it as a property of the mesh */
+  //     /* <primitive object={mesh} rotation-y={Math.PI} /> */
+  //     <mesh ref={chassisBody}>
+  //       <meshBasicMaterial transparent={true} opacity={0.3} />
+  //       <boxGeometry args={chassisBodyArgs} />
+  //     </mesh>
+
+  //     <WheelDebug wheelRef={wheels[0]} radius={wheelRadius} />
+  //     <WheelDebug wheelRef={wheels[1]} radius={wheelRadius} />
+  //     <WheelDebug wheelRef={wheels[2]} radius={wheelRadius} />
+  //     <WheelDebug wheelRef={wheels[3]} radius={wheelRadius} />
+  //   </group>
+  // );
 }
+  
