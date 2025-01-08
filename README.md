@@ -33,9 +33,9 @@ Creating a desktop Car racing game [React](https://reactjs.org/), [Three.js](htt
 
 <br />
 <img src="https://github.com/sctlcd/react-threejs-car-racing/blob/main/design/205-gti-interior.png" alt="react-threejs-car-racing" width="800">
-<br /><br />
+<br />
 
-copyright [Jérôme SECLIER](https://la_freizz_artland.artstation.com/)
+3D model of the peugeot 205 gti | copyright [Jérôme SECLIER](https://la_freizz_artland.artstation.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
