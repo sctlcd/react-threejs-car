@@ -29,13 +29,15 @@
 
 Creating a desktop Car racing game [React](https://reactjs.org/), [Three.js](https://threejs.org/), [React Three Fiber](https://github.com/pmndrs/react-three-fiber), [React Three Drei](https://github.com/pmndrs/drei), [React Three Cannon](https://github.com/pmndrs/use-cannon).
 
-<h2>=> :eyes: Have a look and zoom at the peugeot 205 gti and its interior! :collision:</h2>
+
+3D model of the peugeot 205 gti | copyright [Jérôme SECLIER](https://la_freizz_artland.artstation.com/)
+
+<h2>:eyes: Have a look and zoom in at the peugeot 205 gti and its interior! :collision:</h2>
+<h2>:eyes: Zoom in on the trunk and you'll find the spare wheel! :fire:</h2>
 
 <br />
 <img src="https://github.com/sctlcd/react-threejs-car-racing/blob/main/design/205-gti-interior.png" alt="react-threejs-car-racing" width="800">
 <br />
-
-3D model of the peugeot 205 gti | copyright [Jérôme SECLIER](https://la_freizz_artland.artstation.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
